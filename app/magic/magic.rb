@@ -1,7 +1,7 @@
 
 
 # Use: Magic.new.save_cart
-#      Magic.new.add_up_cart
+#      Magic.new.create_order
 
 class Magic
 
@@ -28,7 +28,7 @@ class Magic
     Cart.create(venue_id: venue.id, products: hash)
   end
 
-  def add_up_cart
+  def create_order
     cart = Cart.last
     products = cart.products
     price = []
@@ -37,7 +37,8 @@ class Magic
       price << item[1]['price'] * item[1]['quantity']
     end
     total = price.inject(0, &:+)
-    return (total / 100).to_f
+
+    Order.create(venue_id: cart.venue_id, total: total, products: cart.products)
   end
 
 end
