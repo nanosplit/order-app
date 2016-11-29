@@ -1,0 +1,1 @@
+json.partial! "backbars/backbar", backbar: @backbar

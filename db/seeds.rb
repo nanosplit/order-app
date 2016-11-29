@@ -1,0 +1,7 @@
+Venue.create(name: "venue 1")
+Venue.create(name: "venue 2")
+Product.create(name: "product 1", price: 399)
+Product.create(name: "product 2", price: 2344)
+Backbar.create(venue_id: 1, product_id: 1)
+Backbar.create(venue_id: 1, product_id: 2)
+Backbar.create(venue_id: 2, product_id: 1)

@@ -1,0 +1,1 @@
+json.array! @backbars, partial: 'backbars/backbar', as: :backbar

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @backbar.venue_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @backbar.product_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @backbar.price %>
+</p>
+
+<%= link_to 'Edit', edit_backbar_path(@backbar) %> |
+<%= link_to 'Back', backbars_path %>

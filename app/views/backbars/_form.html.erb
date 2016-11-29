@@ -1,0 +1,32 @@
+<%= form_for(backbar) do |f| %>
+  <% if backbar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backbar.errors.count, "error") %> prohibited this backbar from being saved:</h2>
+
+      <ul>
+      <% backbar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :venue_id %>
+    <%= f.number_field :venue_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_id %>
+    <%= f.number_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
